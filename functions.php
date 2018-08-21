@@ -496,20 +496,13 @@ function chilly_map( $atts, $content = null ) {
     $lat = $attributes['lat'];
     $lng = $attributes['lng'];
     $chilly_map = '<div id="'. $map_container  .'"></div>';
-    $chilly_map .= "<script>
-
-    (function ($, root, undefined) {
-
-    	$(function () {
-
-    var  map_options = {element: '#" .  $map_container . "'  ,lat: ". $lat . ", lng:  ". $lng . ", title:  '" . $title . "'  };
-      generate_chilly_map(  map_options  );
-
-    });
-
-});
-
+    $chilly_map .= "<script defer='defer'>
+    var  map_options = {element: '#" .  $map_container . "',lat: ". $lat . ", lng:  ". $lng . ", title:  '" . $title . "'  };
+     generate_chilly_map(  map_options  );
     </script>";
+
+
+
     return $chilly_map;
 
 }
