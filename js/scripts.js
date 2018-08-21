@@ -96,7 +96,8 @@
 
         var location_map_container = $( $options.element  );
         location_map_container.css({
-                width : '100%'
+                width : '100%',
+								height : 300
         })
 
         var location_map = new google.maps.Map(location_map_container.get(0), map_options);
