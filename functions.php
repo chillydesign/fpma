@@ -496,7 +496,7 @@ function chilly_map( $atts, $content = null ) {
     $lat = $attributes['lat'];
     $lng = $attributes['lng'];
     $chilly_map = '<div id="'. $map_container  .'"></div>';
-    $chilly_map .= "<script>
+    $script = "
 
     (function() {
         var nTimer = setInterval(function() {
@@ -509,8 +509,8 @@ function chilly_map( $atts, $content = null ) {
     })();
 
 
-    </script>";
-
+    ";
+    $chilly_map .= wp_add_inline_script(  $random_id,  $script);
 
 
     return $chilly_map;
