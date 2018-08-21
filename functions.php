@@ -500,12 +500,12 @@ function chilly_map( $atts, $content = null ) {
 
     (function() {
         var nTimer = setInterval(function() {
-            if (window.jQuery) {
+            if (typeof generate_chilly_map === 'function') {
                 var  map_options = {element: '#" .  $map_container . "',lat: ". $lat . ", lng:  ". $lng . ", title:  '" . $title . "'  };
                 generate_chilly_map(  map_options  );
                 clearInterval(nTimer);
             }
-        }, 100);
+        }, 200);
     })();
 
 
