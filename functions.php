@@ -510,7 +510,7 @@ function chilly_map( $atts, $content = null ) {
                 );
                 clearInterval(". $timer.");
             }
-        }, 500);
+        }, 750);
     </script>
 
 
