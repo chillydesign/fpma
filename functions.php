@@ -490,27 +490,32 @@ function chilly_map( $atts, $content = null ) {
 
     $random_id =  dechex( mt_rand( 0, 999999999 )) ;
     $map_container = 'map_container_' . $random_id;
-
+    $timer = 'timer_' . $random_id;
 
     $title = $attributes['title'];
     $lat = $attributes['lat'];
     $lng = $attributes['lng'];
-    $chilly_map = '<div id="'. $map_container  .'"></div>';
-    $script = "
-
-    (function() {
-        var nTimer = setInterval(function() {
+    $chilly_map = '<div class="map_container" id="'. $map_container  .'"></div>';
+    $script = "<script>
+        var " . $timer . "= setInterval(function() {
+          console.log('generating map');
             if (typeof generate_chilly_map === 'function') {
-                var  map_options = {element: '#" .  $map_container . "',lat: ". $lat . ", lng:  ". $lng . ", title:  '" . $title . "'  };
-                generate_chilly_map(  map_options  );
-                clearInterval(nTimer);
+              generate_chilly_map(
+                {
+                  element: '#" .  $map_container . "',
+                  lat: ". $lat . ",
+                  lng:  ". $lng . ",
+                  title:  '" . $title . "'
+                }
+                );
+                clearInterval(". $timer.");
             }
-        }, 200);
-    })();
+        }, 500);
+    </script>
 
 
     ";
-    $chilly_map .= wp_add_inline_script(  $random_id,  $script);
+    $chilly_map .=   $script;
 
 
     return $chilly_map;
