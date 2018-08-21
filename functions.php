@@ -488,12 +488,17 @@ function chilly_map( $atts, $content = null ) {
     ), $atts );
 
 
+    $random_id =  dechex( mt_rand( 0, 999999999 )) ;
+    $map_container = 'map_container_' . $random_id;
+
 
     $title = $attributes['title'];
     $lat = $attributes['lat'];
     $lng = $attributes['lng'];
-    $chilly_map = '<div id="map_container"></div>';
-    $chilly_map .= "<script> var   map_location = {lat: ". $lat . ", lng:  ". $lng . ", title:  '" . $title . "'  }; </script>";
+    $chilly_map = '<div id="'. $map_container  .'"></div>';
+    $chilly_map .= "var  map_options = {element: '#" .  $map_container . "'  ,lat: ". $lat . ", lng:  ". $lng . ", title:  '" . $title . "'  };
+    <script>   generate_chilly_map(  map_options  );
+    </script>";
     return $chilly_map;
 
 }
@@ -578,7 +583,7 @@ function add_scheme_to_url($url, $scheme = 'http://'){
 
 
 
-$args = array(
+$acf_options_args = array(
 
     /* (string) The title displayed on the options page. Required. */
     'page_title' => 'Textes footer',
@@ -620,7 +625,7 @@ $args = array(
     'autoload' => false,
 
 );
-acf_add_options_page( $args );
+acf_add_options_page( $acf_options_args );
 
 
 
