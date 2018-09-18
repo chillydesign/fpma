@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	
+
 	<!-- section -->
 	<section>
 
@@ -8,38 +8,32 @@
 
 		<!-- article -->
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<h1>
+							<?php the_title(); ?>
 
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-				</a>
-			<?php endif; ?>
-			<!-- /post thumbnail -->
+						</h1>
 
-			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
+						<!-- post details -->
+						<p class="date">Le <?php echo get_the_date(); ?></p>
+						<!-- /post details -->
 
-			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<span class="author"><?php _e( 'Published by', 'webfactor' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'webfactor' ), __( '1 Comment', 'webfactor' ), __( '% Comments', 'webfactor' )); ?></span>
-			<!-- /post details -->
+						<?php the_content(); // Dynamic Content ?>
 
-			<?php the_content(); // Dynamic Content ?>
+									<?php edit_post_link(); // Always handy to leave Edit Post Links available ?>
+					</div>
+				</div>
+			</div>
 
-			<?php the_tags( __( 'Tags: ', 'webfactor' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
 
-			<p><?php _e( 'Categorised in: ', 'webfactor' ); the_category(', '); // Separated by commas ?></p>
 
-			<p><?php _e( 'This post was written by ', 'webfactor' ); the_author(); ?></p>
 
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
 
-			<?php comments_template(); ?>
+
+
+			<?php //comments_template(); ?>
 
 		</article>
 		<!-- /article -->
@@ -60,8 +54,8 @@
 
 	</section>
 	<!-- /section -->
-	
 
-<?php get_sidebar(); ?>
+
+<?php //get_sidebar(); ?>
 
 <?php get_footer(); ?>

@@ -7,10 +7,13 @@
 			<!-- article -->
 			<article id="post-404">
 
-				<h1><?php _e( 'Page not found', 'webfactor' ); ?></h1>
+				<div class="container">
+					<h1>404 - Page non trouvée</h1>
 				<p>
-					<a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'webfactor' ); ?></a>
+					La page que vous recherchez n'existe pas. L'url est peut-être erronnée, ou la page a été déplacée ou supprimée.
 				</p>
+
+				<h6><a href="<?php echo get_home_url();?>">Retour à l'accueil</a></h6>
 
 			</article>
 			<!-- /article -->
@@ -19,6 +22,6 @@
 		<!-- /section -->
 
 
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 
 <?php get_footer(); ?>

@@ -14,6 +14,7 @@
 								<ul>
 								 <?php chilly_nav('extra-menu'); ?>
 							 </ul>
+							 <p>Pour les rachats d’années, merci de contacter <span style="display:inline-block">M. Figliola</span>, avant d’effectuer tout virement.</p>
 						 </div>
 						</div>
 					</div>

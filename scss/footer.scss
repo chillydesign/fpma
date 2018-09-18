@@ -17,6 +17,8 @@ footer{
 
 		hr {
 			border-top: solid 1px white;
+			border-bottom: 0;
+			margin: 5px 0;
 		}
 
 		.footer_col {
@@ -48,15 +50,15 @@ footer{
 
 		&:after{
 			content: '';
-	    height: 330px;
-	    width: 330px;
-	    position: absolute;
-	    bottom: -50px;
-	    right: 0;
-	    background-image: url(../img/question-woman.png);
-	    background-repeat: no-repeat;
-	    background-size: contain;
-	    background-position: bottom right;
+			height: 330px;
+			width: 330px;
+			position: absolute;
+			bottom: -50px;
+			right: 0;
+			background-image: url(../img/question-woman.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: bottom right;
 			pointer-events: none;
 
 		}
@@ -71,5 +73,12 @@ footer{
 		color: white;
 		text-align: center;
 		padding: 20px 0 0;
+
+		a{
+			color: white;
+			&:visited, &:focus, &:active {
+				color: white;
+			}
+		}
 	}
 }

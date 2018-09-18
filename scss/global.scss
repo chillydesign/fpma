@@ -55,7 +55,7 @@ li {
 	font-size: 1.5em;
 	padding:0 0 5px 20px;
 	line-height: 160% ;
-	background-image: url('../img/arrowbullet.png');
+	background-image: url('../img/arrowbulletblue.png');
 	background-position: top 8px left;
 	background-repeat: no-repeat;
 }
@@ -107,7 +107,7 @@ a {
 
 
 	&:link, &:visited, &:active {
-		color: $light-blue
+		color: $dark-blue
 	}
 	&:hover {
 		border-bottom: 1px solid $light-blue;
@@ -260,6 +260,9 @@ h6 a, a h6 {
 		margin-top: 0;
 	}
 	li, p {font-size: 1.8em;}
+	li{
+		background-image: url('../img/arrowbullet.png');
+	}
 }
 
 .parent_container .container{
@@ -328,7 +331,7 @@ h6 a, a h6 {
 	}
 }
 
-div#map_container {
+div.map_container {
     height: 280px;
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(0,0,0,0.4);
@@ -338,4 +341,9 @@ div#map_container {
 
 iframe {
 	width: 100%;
+}
+
+p.date {
+    color: #909090;
+    font-style: italic;
 }

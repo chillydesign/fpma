@@ -31,10 +31,10 @@
 			<header class="header" id="header">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-3 col-sm-push-0 col-xs-10">
+						<div class="col-md-3 col-md-push-0 col-xs-10 col-sm-10">
 							<a href="<?php echo home_url(); ?>" class="branding"><?php bloginfo('name'); ?></a>
 						</div>
-						<div class="col-sm-9">
+						<div class="col-md-9">
 							<nav id="navigation_menu" role="navigation">
 								 <ul>
 									 <?php chilly_nav('primary-navigation'); ?>

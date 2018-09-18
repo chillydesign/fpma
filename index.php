@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-
+<div class="container">
 		<!-- section -->
 		<section>
 
-			<h1><?php _e( 'Latest Posts', 'webfactor' ); ?></h1>
+			<h1><?php _e( 'L\'Actualité FPMA', 'webfactor' ); ?></h1>
 
 			<?php get_template_part('loop'); ?>
 
@@ -13,7 +13,8 @@
 		</section>
 		<!-- /section -->
 
+</div>
 
-<?php get_sidebar(); ?>
+
 
 <?php get_footer(); ?>

@@ -30,12 +30,12 @@
 						<div class="col-sm-4 box">
 							<h3>Règlements</h3>
 							<div class="box_content"><?php echo get_field('reglements'); ?></div>
-							<h6><a href="<?php echo get_home_url();?>/reglements-et-publications#reglenents">Tous les règlements</a></h6>
+							<h6><a href="<?php echo get_home_url();?>/reglements-et-publications">Tous les règlements</a></h6>
 						</div>
 						<div class="col-sm-4 box">
 							<h3>Formulaires</h3>
 							<div class="box_content"><?php echo get_field('formulaires'); ?></div>
-							<h6><a href="<?php echo get_home_url();?>/reglements-et-publications#formulaires">Tous les formulaires</a></h6>
+							<h6><a href="<?php echo get_home_url();?>/faq">Tous les formulaires</a></h6>
 						</div>
 						<div class="col-sm-4 box">
 							<h3>FAQ</h3>
@@ -72,6 +72,7 @@
 						   		<div class="news_box">
 										<div class="news_box_content">
 											<h5><?php the_title(); ?></h5>
+											<div class="news_date"><?php echo get_the_date(); ?></div>
 										<div class="news_excerpt"><?php echo html5wp_excerpt(); ?></div>
 											<a class="readmore" href="<?php the_permalink();?>">Lire plus</a>
 										</div>

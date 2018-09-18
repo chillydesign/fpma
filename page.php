@@ -49,10 +49,11 @@
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<?php include('section-loop.php'); ?>
+				<div class="container parent_container">
+					<?php include('section-loop.php'); ?>
+				</div>
 
 
-				<div class="container">
 					<?php the_content(); ?>
 					<?php // comments_template( '', true ); // Remove if you don't want comments ?>
 					<?php edit_post_link(); ?>
