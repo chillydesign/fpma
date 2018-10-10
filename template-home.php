@@ -35,19 +35,19 @@
 						<div class="col-sm-4 box">
 							<h3>Formulaires</h3>
 							<div class="box_content"><?php echo get_field('formulaires'); ?></div>
-							<h6><a href="<?php echo get_home_url();?>/faq">Tous les formulaires</a></h6>
+							<h6><a href="<?php echo get_home_url();?>/infos-pratiques">Tous les formulaires</a></h6>
 						</div>
 						<div class="col-sm-4 box">
-							<h3>FAQ</h3>
+							<h3>Infos Pratiques</h3>
 							<div class="box_content"><?php echo get_field('faq'); ?></div>
-							<h6><a href="<?php echo get_home_url();?>/faq">Toutes les questions</a></h6>
+							<h6><a href="<?php echo get_home_url();?>/infos-pratiques">Toutes les questions</a></h6>
 						</div>
 					</div>
 				</div>
 				<div class="white_banner">
 					<div class="container">
 						<h4>Une question? N’hésitez pas à parcourir notre <br>
-							<a href="<?php echo get_home_url(); ?>/faq">Foire aux Questions</a> ou contactez-nous <a href="<?php echo get_home_url(); ?>/contact">ici</a>.</h4>
+							<a href="<?php echo get_home_url(); ?>/infos-pratiques">Foire aux Questions</a> ou contactez-nous <a href="<?php echo get_home_url(); ?>/contact">ici</a>.</h4>
 					</div>
 				</div>
 			</section>

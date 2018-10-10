@@ -12,6 +12,10 @@
 	transition: all 0.3s;
 }
 
+html {
+	overflow-x: hidden;
+	width: 100vw;
+}
 
 body {
 	background: $background-color;

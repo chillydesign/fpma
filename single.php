@@ -21,6 +21,9 @@
 						<!-- /post details -->
 
 						<?php the_content(); // Dynamic Content ?>
+						<?php if(get_field('attachment')) : ?>
+							<p class="attachment"><a href="<?php echo get_field('attachment')['url']; ?>" target="_blank"><?php echo get_field('nom_du_fichier_joint'); ?></a></p>
+						<?php endif; ?>
 
 									<?php edit_post_link(); // Always handy to leave Edit Post Links available ?>
 					</div>
