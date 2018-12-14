@@ -129,10 +129,23 @@ em, i {font-style: italic}
 table {
 	width: 100%;
 	margin:0 0 40px;
+	overflow-y: scroll;
+	background: rgba(255,255,255,0.6);
 }
 
-th, td {font-size: 1.5em;padding:10px;border:0}
-section td {font-size: 2em;line-height: 160%;padding:0 0 10px;}
+// th, td {font-size: 1.5em;padding:10px;border:0}
+// section td {font-size: 2em;line-height: 160%;padding:0 0 10px;}
+
+
+table * {
+	font-size: 14px!important;
+}
+
+table td {
+	border: dotted 1px #ccc;
+padding: 5px 10px!important;
+line-height: 160%;
+}
 
 blockquote {
 	padding: 0 20px 40px;
