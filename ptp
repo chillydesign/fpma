@@ -1,0 +1,7 @@
+#!/bin/bash
+
+ssh conservatoire << EOF
+cd ~/musiquesarts.ch/wp-content/themes/fpma;
+git pull origin master;
+echo "DONE!";
+EOF
