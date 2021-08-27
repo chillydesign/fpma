@@ -16,7 +16,7 @@
 			// console.log(encodeURIComponent($href));
 			gtag('event', 'Download',
 				{
-					'event_category': 'Download PDF',
+					'event_category': 'Download',
 					'event_label': $href,
 					'value': $href
 				}
