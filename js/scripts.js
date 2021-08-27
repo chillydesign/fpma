@@ -11,10 +11,16 @@
 		$pdf_links.on('click', function () {
 			var $this = $(this);
 			var $href = $this.attr('href');
-			console.log($this);
-			console.log($href);
-			console.log(encodeURIComponent($href));
-			gtag('event', 'Download', { 'href': encodeURIComponent($href) });
+			// console.log($this);
+			// console.log($href);
+			// console.log(encodeURIComponent($href));
+			gtag('event', 'Download',
+				{
+					'event_category': 'Download PDF',
+					'event_label': $href,
+					'value': $href
+				}
+			);
 
 		})
 
