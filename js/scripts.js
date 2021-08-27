@@ -14,11 +14,10 @@
 			// console.log($this);
 			// console.log($href);
 			// console.log(encodeURIComponent($href));
-			gtag('event', 'Download',
+			gtag('event', 'Downloads',
 				{
 					'event_category': 'Download',
-					'event_label': $href,
-					'href': $href
+					'event_label': encodeURIComponent($href)
 				}
 			);
 
