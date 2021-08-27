@@ -10,8 +10,11 @@
 		var $pdf_links = $('a[href$=".pdf"]');
 		$pdf_links.on('click', () => {
 			var $this = $(this);
-			gtag('event', 'Download', { 'href': $this.attr('href') });
+			var $href = $this.attr('href');
+			gtag('event', 'Download', { 'href': encodeURIComponent($href) });
 			console.log($this);
+			console.log($href);
+			console.log(encodeURIComponent($href));
 		})
 
 

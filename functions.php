@@ -85,7 +85,7 @@ function webfactor_nav() {
 }
 
 function wf_version() {
-    return '0.1.0';
+    return '0.1.1';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -300,7 +300,7 @@ function webfactorcomments($comment, $args, $depth) {
             <div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars(get_comment_link($comment->comment_ID)) ?>">
                     <?php
                     printf(__('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'), '  ', '');
-                                                                                        ?>
+                                                                                                ?>
             </div>
 
             <?php comment_text() ?>
