@@ -14,9 +14,9 @@
 			// console.log($this);
 			// console.log($href);
 			// console.log(encodeURIComponent($href));
-			gtag('event', 'view_item',
+			gtag('event', 'Download',
 				{
-					'event_category': 'PDF',
+					'event_category': 'DownloadPDF',
 					'event_label': encodeURIComponent($href)
 				}
 			);
