@@ -7,7 +7,7 @@
 		$('section .box_content').matchHeight();
 
 
-		$pdf_links = $('a[href$=".pdf"]');
+		var $pdf_links = $('a[href$=".pdf"]');
 		$pdf_links.on('click', () => {
 			var $this = $(this);
 			gtag('event', 'Download', { 'href': $this.attr('href') });
