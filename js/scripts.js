@@ -18,7 +18,7 @@
 				{
 					'event_category': 'Download',
 					'event_label': $href,
-					'value': $href
+					'href': $href
 				}
 			);
 
